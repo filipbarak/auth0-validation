@@ -1,0 +1,9 @@
+<h1>
+  {{title}}
+</h1>
+
+<button *ngIf="!auth.isAuthenticated()" (click)="auth.login()">login</button>
+<button *ngIf="auth.isAuthenticated()" (click)="auth.logout()">logout</button>
+<button *ngIf="auth.isAuthenticated()" (click)="showProfile()">Show Profile</button>
+<button *ngIf="auth.isAuthenticated()" (click)="updateProfile()">Update profile</button>
+<button *ngIf="auth.isAuthenticated()" (click)="callApi()">Call API</button>
